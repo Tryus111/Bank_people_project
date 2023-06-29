@@ -7,8 +7,8 @@ df = raw_data.copy()
 df = df.drop(df[['RowNumber', 'CustomerId', 'Surname']], axis = 1)
 df = df.dropna()
 
-x = df.iloc[:, : -1]
-y = df.iloc[:, -1]
+x = df.iloc[:, : -1].values
+y = df.iloc[:, -1].values
 
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
